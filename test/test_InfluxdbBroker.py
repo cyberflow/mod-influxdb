@@ -284,9 +284,7 @@ class TestInfluxdbBrokerInstance(unittest.TestCase):
         self.assertEqual(expected, point)
 
         # A service notification's tags should include service_desc
-        data['log'] = '[1402515279] SERVICE NOTIFICATION: admin;localhost;\
-                       check-ssh;CRITICAL;notify-service-by-email;\
-                       Connection refused'
+        data['log'] = '[1402515279] SERVICE NOTIFICATION: admin;localhost;check-ssh;CRITICAL;notify-service-by-email;Connection refused'  # nopep8
         brok = Brok('log', data)
         brok.prepare()
         broker.buffer = []
