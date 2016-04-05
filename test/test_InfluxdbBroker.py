@@ -257,7 +257,7 @@ class TestInfluxdbBrokerInstance(unittest.TestCase):
     def test_manage_log_brok(self):
         data = {
             'log': '[1402515279] HOST NOTIFICATION: admin;localhost;CRITICAL;\
-                notify-service-by-email;Connection refused'
+                    notify-service-by-email;Connection refused'
         }
         brok = Brok('log', data)
         brok.prepare()
