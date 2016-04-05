@@ -256,8 +256,7 @@ class TestInfluxdbBrokerInstance(unittest.TestCase):
 
     def test_manage_log_brok(self):
         data = {
-            'log': '[1402515279] HOST NOTIFICATION: admin;localhost;CRITICAL;\
-                    notify-service-by-email;Connection refused'
+            'log': '[1402515279] HOST NOTIFICATION: admin;localhost;CRITICAL;notify-service-by-email;Connection refused'  # nopep8
         }
         brok = Brok('log', data)
         brok.prepare()
@@ -298,8 +297,7 @@ class TestInfluxdbBrokerInstance(unittest.TestCase):
 
     def test_log_brok_illegal_char(self):
         data = {
-            'log': '[1329144231] SERVICE ALERT: www.cibc.com;www.cibc.com;\
-                    WARNING;HARD;4;WARNING - load average: 5.04, 4.67, 5.04'
+            'log': '[1329144231] SERVICE ALERT: www.cibc.com;www.cibc.com;WARNING;HARD;4;WARNING - load average: 5.04, 4.67, 5.04'  # nopep8
         }
         brok = Brok('log', data)
         brok.prepare()
